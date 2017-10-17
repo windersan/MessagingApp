@@ -1,5 +1,5 @@
 Installation:
-Clone code
+Clone code.
 Run commands: 'npm install',
 'npm install react-router-dom',
 'npm install axios',
