@@ -1,8 +1,8 @@
 Installation:
 Clone code
-'npm install'
-'npm install react-router-dom'
-'npm install axios'
+Run commands: 'npm install',
+'npm install react-router-dom',
+'npm install axios',
 'npm start'
 (If you don't have Node, please contact me.)
 
