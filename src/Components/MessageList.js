@@ -43,11 +43,24 @@ class MessageList extends React.Component {
  }
 
  //This function is for when a new message is added by the user
- _addMessage(text){
+ _addMessage(newtext){
      const message = {
-        text
+        newtext
      };
     this.setState({messages: this.state.messages.concat([message])});
+    
+    /* Make a POST with Axios:
+    axios.post(URL, {
+        text: newtext
+    })
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+    */
+
  }
 
  componentWillMount(){
@@ -56,15 +69,15 @@ class MessageList extends React.Component {
     this.setState({messages: [{"date": "2017-01-01 10:10", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "sender_user": 5},
     {"date": "2017-01-01 10:11", "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "sender_user": 1}]});
 
-    /*The AJAX below can be used later to get the values from an API, for example at
+    /* The Axios code below can be used later to GET the values from an API, for example at
     ~/GET/messages?id=USER_ID     The user ID is available for access in the props.
-
     axios.get('URL')
     .then((result)=> {
       this.setState({
         messages: result.data.messages
       });
-    })*/
+    })
+    */
  }
 }
 
